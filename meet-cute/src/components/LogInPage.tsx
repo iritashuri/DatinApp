@@ -1,5 +1,5 @@
 import React from 'react';
 
-const RegistraitionForm: React.FC = () => {
+const LogInPage: React.FC = () => {
   return <div />;
 };
