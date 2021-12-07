@@ -8,8 +8,4 @@ const AppLogo: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AppLogo;
-=======
-export default AppLogo;
->>>>>>> f065ad8835f0c43c18e1c2211df57587910de073

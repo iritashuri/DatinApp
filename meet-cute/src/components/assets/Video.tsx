@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../store';
-import { fetchVideo } from '../store/meetCuteSlice';
+import { RootState } from '../../store';
+import { fetchVideo } from '../../store/meetCuteSlice';
 
 const Video = () => {
   const dipatch = useDispatch();

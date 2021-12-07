@@ -1,6 +1,6 @@
 import React, { CSSProperties } from "react";
-import { topBar } from "../utils/emotions";
-import AppLogo from "./AppLogo";
+// import { topBar } from "../utils/emotions";
+import AppLogo from "../assets/AppLogo";
 
 const style: CSSProperties = {
   position: "sticky",
@@ -23,7 +23,7 @@ const renderHeader = () => {
 const TopBar: React.FC = () => {
   return (
     <>
-      <nav css={topBar} style={style}>
+      <nav style={style}>
         {renderHeader()}
       </nav>
       <div>

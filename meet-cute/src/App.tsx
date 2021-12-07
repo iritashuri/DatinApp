@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 import logo from './logo.svg';
 import './App.css';
-import Video from './components/Video';
+import Video from './components/assets/Video';
 
 function App() {
   return (
@@ -24,18 +23,6 @@ function App() {
         </div>
       </header>
     </div>
-=======
-import './App.css';
-import LeftBar from './components/LeftBar';
-import TopBar from './components/TopBar';
-
-function App() {
-  return (
-      <>
-        <TopBar />
-        <LeftBar />
-      </>
->>>>>>> f065ad8835f0c43c18e1c2211df57587910de073
   );
 }
 
