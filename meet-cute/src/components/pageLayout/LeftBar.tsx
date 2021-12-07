@@ -1,6 +1,6 @@
 import React, { CSSProperties } from "react";
-import ProfilePicture from "./ProfilePicture";
-import UserName from "./UserName";
+import ProfilePicture from "../ProfilePicture";
+import UserName from "../UserName";
 
 const style: CSSProperties = {
   position: "sticky",
