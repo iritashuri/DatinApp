@@ -1,5 +1,11 @@
 import React from 'react';
 
-const PageTitle: React.FC = () => {
-  return <div />;
+interface IProps {
+  title: string;
+}
+
+const PageTitle: React.FC<IProps> = ({ title }) => {
+  return <h2>{title}</h2>;
 };
+
+export default PageTitle
