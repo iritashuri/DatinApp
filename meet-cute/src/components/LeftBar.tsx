@@ -1,5 +1,21 @@
-import React from 'react';
+import React, { CSSProperties } from "react";
+import ProfilePicture from "./ProfilePicture";
+import UserName from "./UserName";
+
+const style: CSSProperties = {
+  position: "sticky",
+  top: 0,
+  left: 0,
+}
 
 const LeftBar: React.FC = () => {
-  return <div />;
+  // const {name, lastName, profilePicture} = useUserData();
+  return (
+    <nav style={style}>
+        {/* <a href="/Home"><ProfilePicture profilePicture={profilePicture}/></a> */}
+        {/* <a href="/Home"><UserName name={name} lastName={lastName}/></a> */}
+    </nav>
+  );
 };
+
+export default LeftBar;
