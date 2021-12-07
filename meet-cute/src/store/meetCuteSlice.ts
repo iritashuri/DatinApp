@@ -13,6 +13,7 @@ export const meetCuteSlice = createSlice({
     userCurrentConvPartnerToken: '',
     currentProfilePageInfo: {} as IUserData,
     currentProfileIsThisUser: false,
+    video: '',
   },
   reducers: {
     login: (state, action) => {},
@@ -28,10 +29,20 @@ export const meetCuteSlice = createSlice({
     // check if user profile i
     fetchProfilePage: (state, action) => {},
 
-
+    fetchVideo: (state) => {
+      state.video =
+        'https://syringe-test.s3.us-west-2.amazonaws.com/shir-project-meet-cute-description.png';
+    },
   },
 });
 
-export const {} = meetCuteSlice.actions;
+export const {
+  login,
+  logout,
+  fetcheMatches,
+  fetchSearches,
+  fetchUserData,
+  fetchVideo,
+} = meetCuteSlice.actions;
 
 export default meetCuteSlice.reducer;
