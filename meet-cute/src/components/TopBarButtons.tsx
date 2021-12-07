@@ -1,5 +1,11 @@
 import React from 'react';
 
-const TopBarButtons: React.FC = () => {
-  return <div />;
+interface ITopButton {
+  text: string;
+}
+
+const TopBarButtons: React.FC<ITopButton> = ({text}) => {
+  return <button>{text}</button>;
 };
+
+export default TopBarButtons;
