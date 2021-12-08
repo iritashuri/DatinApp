@@ -8,18 +8,18 @@ const LogInPage: React.FC = () => {
       <form>
         <label>
           <p>Email:</p>
-          <input type="email" />
+          <input required type="email"/>
         </label>
         <label>
           <p>Password:</p>
-          <input type="password" />
+          <input required type="password"/>
         </label>
         <div>
           <button type="submit">Submit</button>
         </div>
       </form>
     </>
-  )
+  );
 };
 
 export default LogInPage;

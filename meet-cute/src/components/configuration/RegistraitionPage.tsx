@@ -7,20 +7,20 @@ const RegistraitionPage: React.FC = () => {
       <PageTitle title="Registraition"/>
       <form>
         <label>
-          <p>Email:</p>
-          <input type="email" />
+          <p>Email: *</p>
+          <input type="email" required/>
         </label>
         <label>
-          <p>Password:</p>
-          <input type="password" />
+          <p>Password: *</p>
+          <input type="password" required/>
         </label>
         <label>
-          <p>First Name:</p>
-          <input type="text" />
+          <p>First Name: *</p>
+          <input type="text" required/>
         </label>
         <label>
-          <p>Last name:</p>
-          <input type="text" />
+          <p>Last name: *</p>
+          <input type="text" required/>
         </label>
         <div>
           <button type="submit">Submit</button>
