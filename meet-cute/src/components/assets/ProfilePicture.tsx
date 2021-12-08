@@ -1,7 +1,13 @@
 import React from 'react';
 
-const ProfilePicture: React.FC = () => {
-  return <div />;
+interface IProp{
+  profilePicture: string;
+}
+
+const ProfilePicture: React.FC<IProp> = ({profilePicture}) => {
+  return (
+    <img src={profilePicture} alt='profile picture' />
+  );
 };
 
 export default ProfilePicture;
