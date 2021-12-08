@@ -1,5 +1,5 @@
 import React from 'react';
-import useUserData from '../hooks/use';
+import useUserData from '../../hooks/use';
 
 const UserName: React.FC = () => {
   const { userName, userLastName } = useUserData();
