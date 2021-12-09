@@ -3,7 +3,7 @@ import IGender from "./IGender";
 interface UserData {
   userName: string;
   userLastName: string;
-  profilePicture: HTMLImageElement;
+  profilePicture: File;
   birthDate: Date;
   age: number;
   gender: IGender,

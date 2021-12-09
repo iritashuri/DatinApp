@@ -1,5 +1,15 @@
-import React from 'react';
+const SearchBar = () => (
+  <form action="/" method="get">
+      <label htmlFor="header-search">
+      </label>
+      <input
+          type="text"
+          id="header-search"
+          placeholder="Search for Love"
+          name="s" 
+      />
+      <button type="submit">Search</button>
+  </form>
+);
 
-const SearchBar: React.FC = () => {
-  return <div />;
-};
+export default SearchBar;
