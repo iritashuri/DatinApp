@@ -64,6 +64,6 @@ func TestNewLogger(t *testing.T) {
 	mmLogger.Debug("some msg",
 		"key", "value",
 		"key2", "value2",
-		)
+	)
 	require.False(t, mock.wasCalled)
 }
