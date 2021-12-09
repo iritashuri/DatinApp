@@ -1,51 +1,36 @@
 import React from "react";
+import PageTitle from "../pageLayout/PageTitle";
+import { MIN_HEIGHT, MAX_HEIGHT, genderOptions, cityOptions } from "./FormUtils";
+import { InputField } from "./InputField";
+import { SelectField } from "./SelectField";
 
-const MIN_HEIGHT = "1";
-const MAX_HEIGHT = "1000";
-
-const genderOptions = (
-  <>
-    <option value="other">Other</option>
-    <option value="male">Male</option>
-    <option value="female">Female</option>
-  </>
-);
 
 const AboutForm: React.FC = () => {
   return (
-    <>
-      <label>
-        <p>Birth date: *</p>
-        <input type="date" required />
-      </label>
-      <label>
-        <p>Gender: *</p>
-        <select required>{genderOptions}</select>
-      </label>
-      <label>
-        <p>Height (cm): *</p>
-        <input type="number" min={MIN_HEIGHT} max={MAX_HEIGHT} required />
-      </label>
-      <label>
-        <p>City:</p>
-        <input type="text" />
-      </label>
-      <label>
-        <p>Profession:</p>
-        <input type="text" />
-      </label>
-      <label>
-        <p>Hobbies:</p>
-        <input type="text" />
-      </label>
-      <label>
-        <p>About:</p>
-        <input type="text" />
-      </label>
+    
+    <><PageTitle title="About me" />
+    
+    <form>
+
+      <InputField required={true} title="Birth date: *" type="date" />
+
+      <SelectField required={true} title="Gender: *" options={genderOptions} />
+
+      <InputField required={true} title="Height: (cm) *" type="number" min={MIN_HEIGHT} max={MAX_HEIGHT} />
+
+      <SelectField required={false} title="City:" options={cityOptions} />
+
+      <InputField required={false} title="Profession:" type="text" />
+
+      <InputField required={false} title="Hobbies:" type="text" />
+
+      <InputField required={false} title="About:" type="text" />
+
       <div>
         <button type="submit">Submit</button>
       </div>
-    </>
+
+    </form></>
   );
 };
 
