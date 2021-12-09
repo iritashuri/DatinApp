@@ -1,16 +1,16 @@
-import IGender from "./IGender";
+import Gender from "./Gender";
 
-interface UserData {
+interface IUserData {
   userName: string;
   userLastName: string;
   profilePicture: File;
   birthDate: Date;
   age: number;
-  gender: IGender,
+  gender: Gender,
   city: string,
   profession: string,
   hobbies: string,
   about: string,
 }
 
-export default UserData
+export default IUserData

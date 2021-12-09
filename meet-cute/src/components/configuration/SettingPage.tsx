@@ -7,9 +7,7 @@ const SettingPage: React.FC = () => {
   return (
     <>
       <PageTitle title="Settings" />
-      <PageTitle title="About me" />
       <AboutForm />
-      <PageTitle title="Looking for" />
       <LookingForForm />
     </>
   );
