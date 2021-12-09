@@ -1,5 +1,5 @@
 import React from 'react';
 
 const ChatBox: React.FC = () => {
-  return <div />;
+  return <div>Chat Box</div>;
 };

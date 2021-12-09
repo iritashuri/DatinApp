@@ -4,7 +4,7 @@ const logo = 'https://syringe-test.s3.us-west-2.amazonaws.com/shir-project-logo-
 
 const AppLogo: React.FC = () => {
   return (
-    <img src={logo} alt="logo" />
+    <img src={logo} alt="logo" width="100" height="70" />
   );
 };
 

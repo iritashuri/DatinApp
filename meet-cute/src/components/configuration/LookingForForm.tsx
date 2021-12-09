@@ -18,7 +18,7 @@ const LookingForForm: React.FC = () => {
         requiredTo={true} minTo={MIN_AGE} maxTo={MAX_AGE} placeHolderFrom="18" placeHolderTo="120"/>;
  
       <SliderField title="Height (cm): *" type="number" requiredFrom={true} minFrom={MIN_HEIGHT} 
-        maxFrom={MIN_HEIGHT} requiredTo={true} minTo={MIN_HEIGHT} maxTo={MIN_HEIGHT} 
+        maxFrom={MAX_HEIGHT} requiredTo={true} minTo={MIN_HEIGHT} maxTo={MAX_HEIGHT} 
         placeHolderFrom="1" placeHolderTo="1000"/>;
 
       <div>
