@@ -3,7 +3,6 @@ import PageTitle from "../pageLayout/PageTitle";
 import AboutForm from "./AboutForm";
 import LookingForForm from "./LookingForForm";
 
-
 const SettingPage: React.FC = () => {
   return (
     <>
