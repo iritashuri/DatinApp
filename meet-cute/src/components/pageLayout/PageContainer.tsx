@@ -7,7 +7,8 @@ import { Outlet } from "react-router";
 const PageContainer: React.FC = () => {
   return (
     <div className="wrapper">
-      <div className="topBar">
+      
+      <div className="topBar" id="topBar">
         <TopBar />
       </div>
 
