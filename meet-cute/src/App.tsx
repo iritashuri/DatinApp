@@ -1,5 +1,4 @@
 import './App.css';
-import WelcomePage from './components/pageLayout/WelcomePage';
 
 function App() {
   return (

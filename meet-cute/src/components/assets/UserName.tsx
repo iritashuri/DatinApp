@@ -2,14 +2,14 @@ import React from 'react';
 import useUserData from '../../hooks/use';
 
 interface IProp{
-  userName: string;
-  userLastName: string;
+  name: string;
+  lastName: string;
 }
 
-const UserName: React.FC<IProp> = ( { userName, userLastName }) => {
+const UserName: React.FC<IProp> = ( { name, lastName }) => {
   return (
     <div>
-      {userName} {userLastName}
+      {name} {lastName}
     </div>
   );
 };

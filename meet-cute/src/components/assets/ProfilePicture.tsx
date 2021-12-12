@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface IProp{
-  profilePicture: string;
+  profilePicture: File;
 }
 
 const ProfilePicture: React.FC<IProp> = ({profilePicture}) => {

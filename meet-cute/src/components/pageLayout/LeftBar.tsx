@@ -12,7 +12,7 @@ const LeftBar: React.FC = () => {
   return (
     <nav>
         {/* <a href="/Home"><ProfilePicture profilePicture={profilePicture}/></a> */}
-        <a href="/Home"><UserName userName={userName} userLastName={userLastName}/></a>
+        <a href="/Home"><UserName name={userName} lastName={userLastName}/></a>
     </nav>
   );
 };
