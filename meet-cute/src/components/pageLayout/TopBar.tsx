@@ -19,13 +19,13 @@ const TopBar: React.FC = () => {
     <>
       <AppLogo />
       <SearchBar />
-      <a href="/home">Home </a>
-      <a href="/home/inbox">Inbox </a>
-      <a href="/home/settings">Settings </a>
-      <a href="/">LogOut </a>
-      <a href="javascript:void(0);" className="icon" onClick={responsiveTopBar}>
-        <FaBars />
-      </a>
+        <a href="/home">Home </a>
+        <a href="/home/inbox">Inbox </a>
+        <a href="/home/settings">Settings </a>
+        <a href="/">LogOut </a>
+        <a href="javascript:void(0);" className="icon" onClick={responsiveTopBar}>
+          <FaBars />
+        </a>
     </>
   );
 };

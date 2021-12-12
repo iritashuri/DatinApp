@@ -7,18 +7,20 @@ import { Outlet } from "react-router";
 const PageContainer: React.FC = () => {
   return (
     <div className="wrapper">
-      
-      <div className="topBar" id="topBar">
-        <TopBar />
-      </div>
+    
 
       <div className="leftBar">
         <LeftBar />
       </div>
 
-      <div className="main_content">
+      <div className="topBar" id="topBar">
+        <TopBar />
+      </div>
+
+      <div className="mainContent">
         <Outlet />
       </div>
+
     </div>
   );
 };
