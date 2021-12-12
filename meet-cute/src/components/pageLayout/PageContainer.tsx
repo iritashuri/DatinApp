@@ -1,8 +1,8 @@
 import React from "react";
-import ContentPage from "./ContentPage";
 import LeftBar from "./LeftBar";
 import TopBar from "./TopBar";
 import "./PageContainer.css";
+import { Outlet } from "react-router";
 
 const PageContainer: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ const PageContainer: React.FC = () => {
       </div>
 
       <div className="main_content">
-        <ContentPage />
+        <Outlet />
       </div>
     </div>
   );

@@ -1,0 +1,36 @@
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	background: #f2f2f2;
+}
+
+.wrapper {
+    display: flex;
+    justify-items: center;
+}
+
+.form_wrapper {
+	background: #0a6a87;
+	width: 400px;
+    height: 400px;
+	max-width: 100%;
+	box-sizing: border-box;
+	padding: 25px;
+	margin: 8% auto 0;
+	position: relative;
+	z-index: 1;
+	border-top: 5px solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* .form {
+    width: 500px;
+    height: 500px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: cadetblue;
+    border-radius: 15px;
+} */

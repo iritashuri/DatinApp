@@ -2,7 +2,7 @@ import React from 'react';
 import PageTitle from '../pageLayout/PageTitle';
 import { InputField } from './InputField';
 import { FaEnvelope } from "react-icons/fa";
-
+import { MIN_PASSWORD_LEN } from './FormUtils';
 
 
 const RegistraitionPage: React.FC = () => {
@@ -13,7 +13,8 @@ const RegistraitionPage: React.FC = () => {
 
       <InputField required={true} title="Email: *" type="email" placeHolder="abc@gmail.com" icon={<FaEnvelope/>}/>
 
-      <InputField required={true} title="Password: *" type="password" placeHolder="Password here"/>
+      <InputField required={true} title="Password (8 characters minimum): *" type="password" 
+                  placeHolder="Password here" minLength={MIN_PASSWORD_LEN}/>
 
       <InputField required={true} title="First Name: *" type="text" placeHolder="Jonh"/>
 
