@@ -94,7 +94,7 @@ id: "somwuniqeid"
 - 1004
 
 ## sign in
-```POST /outh/signin```
+```POST /auth```
 
 ####request parameters
 | key        | value           | Description  |
