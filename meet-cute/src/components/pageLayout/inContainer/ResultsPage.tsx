@@ -1,22 +1,21 @@
-import React from "react";
-import LeftBar from "./LeftBar";
-import TopBar from "./TopBar";
-import "./PageContainer.css";
-import { Outlet } from "react-router";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../store';
+import PageTitle from '../PageTitle';
+import UserBarMap from './UserBarMap';
 
 const ResultsPage: React.FC = () => {
+  const users = useSelector((state: RootState) => {
+    return state.meetCute.userMatches;
+  });
+
   return (
-    <div className="wrapper">
-      <div className="topBar">
-        <TopBar />
+    <div>
+      <div>
+        <PageTitle title='Results' />
       </div>
-
-      <div className="leftBar">
-        <LeftBar />
-      </div>
-
-      <div className="main_content">
-        <Outlet />
+      <div>
+        <UserBarMap users={users} />
       </div>
     </div>
   );
