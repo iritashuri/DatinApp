@@ -1,5 +1,6 @@
 # overview
-this is an overview of the service we propose by this explained later endpoints
+this is an overview of the service we propose by this explained later endpoints.
+The API is generally RESTFUL and returns results in JSON.
 
 # endpoints
 | Endpoint        | Method           | Description  |

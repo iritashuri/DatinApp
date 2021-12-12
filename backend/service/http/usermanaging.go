@@ -3,7 +3,6 @@ package http
 import (
 	"context"
 	"encoding/json"
-	"fmt"
 	"net/http"
 
 	"datingApp/service/user"
@@ -31,10 +30,8 @@ type UserService interface {
 
 func AddUserRoutes(router *httprouter.Router, s UserService) {
 	createUserHandler := makeCreateUserHandler(s)
-	someFunc := someFunc(s)
 
 	router.Handle(http.MethodPost, "/users", createUserHandler)
-	router.Handle(http.MethodGet, "/users", someFunc)
 }
 
 func makeCreateUserHandler(s UserService) httprouter.Handle {
@@ -64,12 +61,6 @@ func makeCreateUserHandler(s UserService) httprouter.Handle {
 		}
 
 		encodeJSON(w, formatUserIdResponse(id))
-	}
-}
-
-func someFunc(s UserService) httprouter.Handle {
-	return func(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
-		fmt.Println("in get")
 	}
 }
 
