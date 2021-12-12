@@ -11,10 +11,9 @@ import (
 )
 
 type UserCredReq struct {
-	Email     string `json:"email"`
-	Password  string `json:"password"`
+	Email    string `json:"email"`
+	Password string `json:"password"`
 }
-
 
 func AddSignInRout(router *httprouter.Router, s UserService) {
 	findUserHandler := makeFindUserHandler(s)
@@ -34,8 +33,8 @@ func makeFindUserHandler(s UserService) httprouter.Handle {
 		}
 
 		user := user.User{
-			Email:     UserCredReq.Email,
-			Password:  UserCredReq.Password,
+			Email:    UserCredReq.Email,
+			Password: UserCredReq.Password,
 		}
 
 		fmt.Println(user.Password)

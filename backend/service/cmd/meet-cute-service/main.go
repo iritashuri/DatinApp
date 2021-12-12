@@ -42,7 +42,7 @@ func main() {
 	// starting the http server
 	router := userhttp.NewRouter()
 	userhttp.AddUserRoutes(router, userService)
-	userhttp.AddSignInRout(router,userService)
+	userhttp.AddSignInRout(router, userService)
 
 	mainLogger.Info(fmt.Sprintf("start server on port: %s. if development - http://localhost%s", port, port))
 	if err := http.ListenAndServe(port, router); err != nil {

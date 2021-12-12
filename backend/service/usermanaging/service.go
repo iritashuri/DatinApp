@@ -4,6 +4,7 @@ import (
 	"context"
 	"datingApp/service/user"
 	"fmt"
+
 	"golang.org/x/crypto/bcrypt"
 
 	"github.com/RevitalS/someone-to-run-with-app/backend/foundation/nextid"
@@ -11,8 +12,8 @@ import (
 
 type UserRepo interface {
 	CreateUser(ctx context.Context, user user.User) error
-	FindUserByEmail(ctx context.Context, user user.User) (user.User , error)
-	IsIdExist(ctx context.Context, user user.User) (bool , error)
+	FindUserByEmail(ctx context.Context, user user.User) (user.User, error)
+	IsIdExist(ctx context.Context, user user.User) (bool, error)
 }
 
 type service struct {
@@ -34,7 +35,7 @@ func (s *service) CreateUser(ctx context.Context, user user.User) (id string, er
 	return user.ID, nil
 }
 
-func (s *service) LogIn(ctx context.Context, user user.User) (string,error) {
+func (s *service) LogIn(ctx context.Context, user user.User) (string, error) {
 	userRes, err := s.userRepo.FindUserByEmail(ctx, user)
 	if err != nil {
 		return "", fmt.Errorf("CreateUser: %w", err)

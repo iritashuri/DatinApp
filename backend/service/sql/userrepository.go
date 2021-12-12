@@ -13,11 +13,11 @@ type UserRes struct {
 	FirstName string `sql:"first_name"`
 	LastName  string `sql:"last_name"`
 	Email     string `sql:"email"`
-	Password string `sql:"password"`
+	Password  string `sql:"password"`
 }
 
 type UserIdRes struct {
-	ID  string    `sql:"ID"`
+	ID       string `sql:"ID"`
 	Password string `sql:"password"`
 }
 
@@ -43,7 +43,7 @@ func (r *userRepo) CreateUser(ctx context.Context, user user.User) error {
 	return nil
 }
 
-func (r *userRepo) FindUserByEmail(ctx context.Context, userRep user.User) (user.User , error) {
+func (r *userRepo) FindUserByEmail(ctx context.Context, userRep user.User) (user.User, error) {
 	q := `SELECT ID, password FROM users WHERE email = ?`
 
 	results, err := r.db.StructQuery(ctx, UserIdRes{}, q, userRep.Email)
@@ -59,24 +59,21 @@ func (r *userRepo) FindUserByEmail(ctx context.Context, userRep user.User) (user
 	res := results[0].(UserIdRes)
 
 	userRes := user.User{
-		ID: res.ID,
+		ID:       res.ID,
 		Password: res.Password,
 	}
 
-	return  userRes, nil
+	return userRes, nil
 }
 
-
-
-func (r *userRepo) IsIdExist(ctx context.Context, user user.User) (bool , error) {
+func (r *userRepo) IsIdExist(ctx context.Context, user user.User) (bool, error) {
 	q := `SELECT * FROM users WHERE ID=?`
 
-	results, err := r.db.IsExists(ctx,q, user.Password)
+	results, err := r.db.IsExists(ctx, q, user.Password)
 
 	if err != nil {
 		return false, fmt.Errorf("failed to exec: %w", err)
 	}
 
-	return  results, nil
+	return results, nil
 }
-

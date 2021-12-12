@@ -5,7 +5,7 @@ type User struct {
 	FirstName string
 	LastName  string
 	Email     string
-	Password string
+	Password  string
 }
 
 type UserProfile struct {
@@ -13,7 +13,7 @@ type UserProfile struct {
 	FirstName string
 	LastName  string
 	Email     string
-	Password string
+	Password  string
 }
 
 type UserPrefernces struct {
@@ -21,5 +21,5 @@ type UserPrefernces struct {
 	FirstName string
 	LastName  string
 	Email     string
-	Password string
+	Password  string
 }
