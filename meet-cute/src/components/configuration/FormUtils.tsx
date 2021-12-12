@@ -1,6 +1,10 @@
 import Cities from "../../models/Cities";
 import Gender from "../../models/Gender";
 
+export const MIN_PASSWORD_LEN = 8;
+
+export const INPUT_MAX_LEN = 1000;
+
 export const MIN_AGE = "18";
 export const MAX_AGE = "120";
 

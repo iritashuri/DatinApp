@@ -7,10 +7,10 @@ const TopBar: React.FC = () => {
   return (
     <>
       <AppLogo />
-      <a href="/Home">Home</a>
-      <a href="/Inbox">Inbox</a>
-      <a href="/Settings">Settings</a>
-      <a href="/Welcome">LogOut</a>
+      <a href="/home">Home</a>
+      <a href="/home/inbox">Inbox</a>
+      <a href="/home/settings">Settings</a>
+      <a href="/">LogOut</a>
     </>
   );
 };

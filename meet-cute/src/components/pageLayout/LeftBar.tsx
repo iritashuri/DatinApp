@@ -1,6 +1,7 @@
-import React, { CSSProperties } from "react";
-import useUserData from "../../hooks/use";
+import React from "react";
 import ProfilePicture from "../assets/ProfilePicture";
+// import useUserData from "../../hooks/use";
+// import ProfilePicture from "../assets/ProfilePicture";
 import UserName from "../assets/UserName";
 
 const LeftBar: React.FC = () => {
@@ -11,8 +12,8 @@ const LeftBar: React.FC = () => {
 
   return (
     <nav>
-        {/* <a href="/Home"><ProfilePicture profilePicture={profilePicture}/></a> */}
-        <a href="/Home"><UserName userName={userName} userLastName={userLastName}/></a>
+        <a href="/home/profile/:userId"><ProfilePicture profilePicture={''}/></a>
+        <a href="/home/profile/:userId"><UserName userName={userName} userLastName={userLastName}/></a>
     </nav>
   );
 };

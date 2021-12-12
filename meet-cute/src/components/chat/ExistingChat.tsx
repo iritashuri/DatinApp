@@ -1,5 +1,5 @@
 import React from 'react';
 
 const ExistingChat: React.FC = () => {
-  return <div />;
+  return <div>ExistingChat</div>;
 };
