@@ -10,15 +10,11 @@ const LeftBar: React.FC = () => {
   const userName = "Noy"
   const userLastName = "Gini"
 
+  const file = new File(["foo"], "foo.txt");
   return (
     <nav>
-<<<<<<< HEAD
-        {/* <a href="/Home"><ProfilePicture profilePicture={profilePicture}/></a> */}
-        <a href="/Home"><UserName name={userName} lastName={userLastName}/></a>
-=======
-        <a href="/home/profile/:userId"><ProfilePicture profilePicture={''}/></a>
-        <a href="/home/profile/:userId"><UserName userName={userName} userLastName={userLastName}/></a>
->>>>>>> f9e022c8ca6143c576c410c1a6197035c296ca41
+        <a href="/home/profile/:userId"><ProfilePicture profilePicture={file}/></a>
+        <a href="/home/profile/:userId"><UserName name={userName} lastName={userLastName}/></a>
     </nav>
   );
 };

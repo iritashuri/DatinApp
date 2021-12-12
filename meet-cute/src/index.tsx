@@ -35,7 +35,7 @@ const AppWithRouting: React.FC = () => {
              {/* inbox page */}
              <Route path='inbox' element={<PageTitle title='inbox page' />}/>
             {/*profile page*/}
-            <Route path='profile/:userId' element={<ProfilePicture profilePicture={''} />} />
+            <Route path='profile/:userId' element={<ProfilePicture profilePicture={new File(["foo"], "foo.txt")} />} />
           </Route>
         </Routes>
       </React.StrictMode>
