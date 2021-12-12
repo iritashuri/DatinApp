@@ -4,7 +4,6 @@ import RedirectButton from '../smallComp/RedirectButton';
 import { InputField } from './InputField';
 
 
-
 const LogInPage: React.FC = () => {
 
   const handelSubmit = () => {

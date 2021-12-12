@@ -29,7 +29,7 @@ const AppWithRouting: React.FC = () => {
             {/* matching page */}
             <Route path='' element={<PageTitle title='matching page' />} />
             {/* search page */}
-            <Route path='search' element={<PageTitle title='ssearch page' />}/>
+            <Route path='search' element={<PageTitle title='search page' />}/>
             {/* settings page */}
             <Route path='settings' element={<PageTitle title='settings page' />}/>
              {/* inbox page */}
