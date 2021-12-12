@@ -22,8 +22,8 @@ func formatGetAllUsersResponse(users []user.User) map[string]interface{} {
 func formatUser(user user.User) map[string]interface{} {
 	return map[string]interface{}{
 		"id":       user.ID,
-		"fName":    user.FName,
-		"lName":    user.LName,
+		"fName":    user.FirstName,
+		"lName":    user.LastName,
 		"email":    user.Email,
 		"password": user.Password,
 	}

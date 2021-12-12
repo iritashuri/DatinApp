@@ -19,9 +19,8 @@ const (
 )
 
 func main() {
-	configurator := config.NewConfigurator("config/development")
+	configurator := config.NewConfigurator("/Users/irit/GolandProjects/meetCute/DatingApp/backend/service/config/development")
 
-	// loggerator (loggers factory)
 	loggerator := nextlog.NewLoggerator("debug", os.Stdout)
 	mainLogger := loggerator.NewLogger("main")
 
@@ -36,8 +35,6 @@ func main() {
 	userRepo := sql.NewUserRepo(sqlDB)
 	userService := usermanaging.NewService(userRepo)
 
-	// example of use
-	//ctx := context.Background()
 	if err != nil {
 		mainLogger.Error(err, "failed to insert some ducky")
 	}
@@ -45,6 +42,7 @@ func main() {
 	// starting the http server
 	router := userhttp.NewRouter()
 	userhttp.AddUserRoutes(router, userService)
+	userhttp.AddSignInRout(router, userService)
 
 	mainLogger.Info(fmt.Sprintf("start server on port: %s. if development - http://localhost%s", port, port))
 	if err := http.ListenAndServe(port, router); err != nil {
